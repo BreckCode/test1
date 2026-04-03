@@ -1,12 +1,12 @@
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 const GEO_URL = 'https://api.openweathermap.org/geo/1.0';
 
-// Users must provide their own OpenWeatherMap API key
-// Sign up free at https://openweathermap.org/api
-const API_KEY = 'YOUR_API_KEY_HERE';
+// API key is loaded from environment variable EXPO_PUBLIC_WEATHER_API_KEY
+// Create a .env file with: EXPO_PUBLIC_WEATHER_API_KEY=your_key_here
+const API_KEY = process.env.EXPO_PUBLIC_WEATHER_API_KEY || '';
 
 function isApiKeySet() {
-  return API_KEY !== 'YOUR_API_KEY_HERE' && API_KEY.length > 0;
+  return API_KEY.length > 0;
 }
 
 async function fetchJson(url) {

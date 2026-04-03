@@ -50,11 +50,10 @@ npx expo start
 The app works in demo mode with mock data. For live weather data:
 
 1. Sign up for a free API key at [OpenWeatherMap](https://openweathermap.org/api)
-2. Open `src/services/weatherApi.js`
-3. Replace `YOUR_API_KEY_HERE` with your actual API key
+2. Create a `.env` file in the project root:
 
-```js
-const API_KEY = 'your_actual_api_key';
+```
+EXPO_PUBLIC_WEATHER_API_KEY=your_actual_api_key
 ```
 
 The free tier includes 1,000 API calls/day, which is plenty for personal use.
